@@ -1,0 +1,173 @@
+{
+  "world": {
+    "name": "光の大陸",
+    "description": "四神の加護を受けた大陸。魔王の出現により混沌が訪れ、人々は脅威に怯えながらも、勇者の出現を待ち望んでいる。",
+    "mainTheme": "勇者による魔王討伐の冒険",
+    "prophecy": "「光が闇に飲まれし時、選ばれし者が現れ、世界に平安をもたらすであろう」",
+    "cosmology": {
+      "creation": "世界は創造神によって生み出され、四神によって秩序が与えられた。",
+      "divineBeings": [
+        {
+          "name": "創造神",
+          "domain": "創造と調和",
+          "description": "世界を創造し、四神に世界の管理を委ねた存在"
+        },
+        {
+          "name": "四神",
+          "members": [
+            {"name": "火神", "domain": "火と力"},
+            {"name": "水神", "domain": "水と知恵"},
+            {"name": "風神", "domain": "風と自由"},
+            {"name": "地神", "domain": "大地と豊穣"}
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "四神の宝玉",
+          "count": 4,
+          "description": "各神の力が宿った宝玉。世界の安定を保つ力を持つ。",
+          "status": "魔王の出現により力を失い、世界各地に散逸している"
+        }
+      ]
+    },
+    "geography": {
+      "continents": [
+        {
+          "name": "中央大陸",
+          "description": "人類文明の中心地。最も人口が多く、王国がある",
+          "climate": "温暖",
+          "features": ["平原", "森", "山脈"]
+        }
+      ],
+      "specialLocations": [
+        {
+          "name": "魔王城",
+          "description": "魔王の力が世界に侵入した場所",
+          "status": "強大な魔力に包まれている"
+        }
+      ]
+    },
+    "culture": {
+      "religions": [
+        {
+          "name": "四神教",
+          "description": "四神を崇拝する主要宗教",
+          "practices": ["神殿参拝", "祈祷"],
+          "status": "魔王の出現により信仰が揺らいでいる"
+        }
+      ],
+      "languages": [
+        {
+          "name": "共通語",
+          "description": "世界中で使用されている標準的な言語",
+          "status": "世界中で使用されている"
+        }
+      ]
+    }
+  },
+  "locations": {
+    "towns": [
+      {
+        "name": "始まりの町",
+        "type": "castle_town",
+        "description": "王城があり、多くの人々が暮らしている城下町。",
+        "features": ["城", "宿屋", "道具屋", "武器屋", "教会"],
+        "importance": "starting_point"
+      },
+      {
+        "name": "賢者の里",
+        "type": "remote_town",
+        "description": "山奥に位置する隠れ里。賢者が住んでいる。",
+        "features": ["宿屋", "道具屋", "賢者の住処"],
+        "importance": "key_location"
+      }
+    ],
+    "dungeons": [
+      {
+        "name": "試練の洞窟",
+        "type": "cave",
+        "description": "最初の宝玉が眠る洞窟。",
+        "difficulty": "easy",
+        "requiredItems": ["たいまつ"]
+      },
+      {
+        "name": "魔王城",
+        "type": "castle",
+        "description": "魔王が君臨する城。邪悪な気配に満ちている。",
+        "difficulty": "hard",
+        "requiredItems": ["四神の宝玉"]
+      }
+    ],
+    "landmarks": [
+      {
+        "name": "精霊の泉",
+        "type": "spring",
+        "description": "治癒の力を持つ神秘的な泉。"
+      }
+    ]
+  },
+  "keyItems": [
+    {
+      "name": "四神の宝玉",
+      "type": "key_item",
+      "description": "四神の力が宿った宝玉。4つ集めることで魔王に立ち向かう力を得られる。",
+      "location": "各ダンジョン"
+    }
+  ],
+  "characters": {
+    "allies": [
+      {
+        "name": "王",
+        "role": "king",
+        "description": "賢明な王。勇者に導きを与える。"
+      },
+      {
+        "name": "賢者",
+        "role": "sage",
+        "description": "古代の知識を持つ賢者。勇者に重要な情報を与える。"
+      }
+    ],
+    "enemies": {
+      "boss": {
+        "name": "魔王",
+        "description": "強大な力を持つ邪悪な存在。",
+        "location": "魔王城",
+        "minions": ["ドラゴン", "ゴーレム"]
+      },
+      "regular": [
+        "スライム",
+        "コウモリ",
+        "ゴースト",
+        "ゴブリン"
+      ]
+    }
+  },
+  "quests": {
+    "main": {
+      "title": "魔王討伐",
+      "description": "魔王を倒し、平和を取り戻す",
+      "steps": [
+        "王から四神の宝玉を集める任務を受ける",
+        "4つの宝玉を集める",
+        "魔王を倒す"
+      ]
+    },
+    "side": [
+      {
+        "title": "村人の依頼",
+        "description": "道具屋の商品を届ける",
+        "location": "始まりの町"
+      }
+    ]
+  },
+  "gameRules": {
+    "levelCap": 20,
+    "startingItems": ["布の服", "木の棒", "たいまつ"],
+    "currency": "ゴールド",
+    "savePoints": ["教会", "宿屋"],
+    "transportMethods": ["徒歩"],
+    "magicTypes": ["回復", "攻撃"],
+    "statusEffects": ["毒", "まひ"]
+  }
+} 
