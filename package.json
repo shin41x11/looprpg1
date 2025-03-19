@@ -1,0 +1,32 @@
+{
+  "name": "looprpg1",
+  "version": "1.0.0",
+  "description": "クラシックなRPGの魅力を現代に蘇らせる、何度でも楽しめるループ型RPGゲーム。",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "http-server -c-1 -p 8080",
+    "dev": "tsc --watch & http-server -c-1 -p 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shin41x11/looprpg1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shin41x11/looprpg1/issues"
+  },
+  "homepage": "https://github.com/shin41x11/looprpg1#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "http-server": "^14.1.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "phaser": "^3.70.0"
+  }
+}

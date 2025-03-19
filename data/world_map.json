@@ -1,0 +1,295 @@
+{
+  "mapSize": {
+    "width": 40,
+    "height": 40
+  },
+  "tileTypes": {
+    "plain": {
+      "name": "平原",
+      "walkable": true,
+      "encounterRate": 0.2,
+      "enemies": ["スライム", "コウモリ", "ウサギ"]
+    },
+    "forest": {
+      "name": "森",
+      "walkable": true,
+      "encounterRate": 0.3,
+      "enemies": ["ゴブリン", "コウモリ", "狼"]
+    },
+    "mountain": {
+      "name": "山",
+      "walkable": false,
+      "encounterRate": 0,
+      "enemies": []
+    },
+    "path": {
+      "name": "山道",
+      "walkable": true,
+      "encounterRate": 0.4,
+      "enemies": ["ゴブリン", "ゴースト", "山賊"]
+    },
+    "desert": {
+      "name": "砂漠",
+      "walkable": true,
+      "encounterRate": 0.3,
+      "enemies": ["サソリ", "砂虫", "砂漠の精"]
+    },
+    "swamp": {
+      "name": "沼地",
+      "walkable": true,
+      "encounterRate": 0.4,
+      "enemies": ["スライム", "ゴースト", "沼の怪物"]
+    },
+    "ruins": {
+      "name": "遺跡",
+      "walkable": true,
+      "encounterRate": 0.5,
+      "enemies": ["ゴーレム", "古代兵器", "亡霊"]
+    }
+  },
+  "locations": [
+    {
+      "id": "starting_town",
+      "name": "始まりの町",
+      "type": "town",
+      "position": {"x": 5, "y": 5},
+      "connections": ["plain_1", "plain_2"],
+      "features": ["城", "宿屋", "道具屋", "武器屋", "教会"]
+    },
+    {
+      "id": "fire_shrine",
+      "name": "火の祠",
+      "type": "dungeon",
+      "position": {"x": 35, "y": 5},
+      "connections": ["desert_1"],
+      "requirements": ["たいまつ"],
+      "features": ["火神の祭壇", "溶岩の間", "試練の部屋"]
+    },
+    {
+      "id": "water_shrine",
+      "name": "水の祠",
+      "type": "dungeon",
+      "position": {"x": 35, "y": 35},
+      "connections": ["swamp_1"],
+      "requirements": ["水のかけら"],
+      "features": ["水神の祭壇", "水路", "氷の部屋"]
+    },
+    {
+      "id": "wind_shrine",
+      "name": "風の祠",
+      "type": "dungeon",
+      "position": {"x": 5, "y": 35},
+      "connections": ["mountain_2"],
+      "requirements": ["登山用具"],
+      "features": ["風神の祭壇", "空中通路", "風の部屋"]
+    },
+    {
+      "id": "earth_shrine",
+      "name": "地の祠",
+      "type": "dungeon",
+      "position": {"x": 20, "y": 20},
+      "connections": ["ruins_1"],
+      "requirements": ["古代の鍵"],
+      "features": ["地神の祭壇", "地下迷宮", "石の部屋"]
+    },
+    {
+      "id": "sage_village",
+      "name": "賢者の里",
+      "type": "town",
+      "position": {"x": 15, "y": 15},
+      "connections": ["mountain_path", "forest_2"],
+      "features": ["宿屋", "道具屋", "賢者の住処", "図書館"]
+    },
+    {
+      "id": "desert_town",
+      "name": "砂漠の町",
+      "type": "town",
+      "position": {"x": 30, "y": 10},
+      "connections": ["desert_1", "desert_2"],
+      "features": ["宿屋", "道具屋", "オアシス", "市場"]
+    },
+    {
+      "id": "port_town",
+      "name": "港町",
+      "type": "town",
+      "position": {"x": 30, "y": 30},
+      "connections": ["swamp_1", "plain_3"],
+      "features": ["宿屋", "道具屋", "港", "市場"]
+    },
+    {
+      "id": "mountain_village",
+      "name": "山村",
+      "type": "town",
+      "position": {"x": 10, "y": 30},
+      "connections": ["mountain_2", "forest_3"],
+      "features": ["宿屋", "道具屋", "温泉"]
+    },
+    {
+      "id": "spirit_spring",
+      "name": "精霊の泉",
+      "type": "landmark",
+      "position": {"x": 20, "y": 10},
+      "connections": ["plain_1", "forest_2"]
+    },
+    {
+      "id": "ancient_ruins",
+      "name": "古代遺跡",
+      "type": "landmark",
+      "position": {"x": 20, "y": 30},
+      "connections": ["ruins_1", "swamp_1"]
+    },
+    {
+      "id": "demon_castle",
+      "name": "魔王城",
+      "type": "dungeon",
+      "position": {"x": 20, "y": 38},
+      "connections": ["mountain_3"],
+      "requirements": ["四神の宝玉"],
+      "features": ["城門", "大広間", "魔王の間"]
+    }
+  ],
+  "areas": [
+    {
+      "id": "plain_1",
+      "type": "plain",
+      "position": {"x": 8, "y": 5},
+      "size": {"width": 5, "height": 3}
+    },
+    {
+      "id": "plain_2",
+      "type": "plain",
+      "position": {"x": 5, "y": 8},
+      "size": {"width": 3, "height": 5}
+    },
+    {
+      "id": "plain_3",
+      "type": "plain",
+      "position": {"x": 25, "y": 30},
+      "size": {"width": 5, "height": 4}
+    },
+    {
+      "id": "forest_1",
+      "type": "forest",
+      "position": {"x": 12, "y": 5},
+      "size": {"width": 4, "height": 3}
+    },
+    {
+      "id": "forest_2",
+      "type": "forest",
+      "position": {"x": 15, "y": 12},
+      "size": {"width": 4, "height": 4}
+    },
+    {
+      "id": "forest_3",
+      "type": "forest",
+      "position": {"x": 10, "y": 25},
+      "size": {"width": 4, "height": 4}
+    },
+    {
+      "id": "mountain_1",
+      "type": "mountain",
+      "position": {"x": 12, "y": 15},
+      "size": {"width": 3, "height": 4}
+    },
+    {
+      "id": "mountain_2",
+      "type": "mountain",
+      "position": {"x": 5, "y": 30},
+      "size": {"width": 4, "height": 4}
+    },
+    {
+      "id": "mountain_3",
+      "type": "mountain",
+      "position": {"x": 18, "y": 35},
+      "size": {"width": 4, "height": 3}
+    },
+    {
+      "id": "desert_1",
+      "type": "desert",
+      "position": {"x": 30, "y": 5},
+      "size": {"width": 5, "height": 5}
+    },
+    {
+      "id": "desert_2",
+      "type": "desert",
+      "position": {"x": 30, "y": 15},
+      "size": {"width": 5, "height": 5}
+    },
+    {
+      "id": "swamp_1",
+      "type": "swamp",
+      "position": {"x": 30, "y": 25},
+      "size": {"width": 5, "height": 5}
+    },
+    {
+      "id": "ruins_1",
+      "type": "ruins",
+      "position": {"x": 20, "y": 25},
+      "size": {"width": 4, "height": 4}
+    }
+  ],
+  "progression": {
+    "initial_accessible": ["starting_town", "plain_1", "plain_2"],
+    "requirements": {
+      "fire_shrine": ["たいまつ"],
+      "water_shrine": ["水のかけら"],
+      "wind_shrine": ["登山用具"],
+      "earth_shrine": ["古代の鍵"],
+      "demon_castle": ["四神の宝玉"]
+    }
+  },
+  "quests": {
+    "main": [
+      {
+        "id": "fire_orb",
+        "title": "火の宝玉を求めて",
+        "location": "fire_shrine",
+        "prerequisites": ["たいまつ"]
+      },
+      {
+        "id": "water_orb",
+        "title": "水の宝玉を求めて",
+        "location": "water_shrine",
+        "prerequisites": ["水のかけら"]
+      },
+      {
+        "id": "wind_orb",
+        "title": "風の宝玉を求めて",
+        "location": "wind_shrine",
+        "prerequisites": ["登山用具"]
+      },
+      {
+        "id": "earth_orb",
+        "title": "地の宝玉を求めて",
+        "location": "earth_shrine",
+        "prerequisites": ["古代の鍵"]
+      }
+    ],
+    "side": [
+      {
+        "id": "desert_trade",
+        "title": "砂漠の交易",
+        "location": "desert_town",
+        "reward": "水のかけら"
+      },
+      {
+        "id": "mountain_gear",
+        "title": "登山家の依頼",
+        "location": "mountain_village",
+        "reward": "登山用具"
+      },
+      {
+        "id": "ancient_key",
+        "title": "古代の秘密",
+        "location": "ancient_ruins",
+        "reward": "古代の鍵"
+      },
+      {
+        "id": "spirit_blessing",
+        "title": "精霊の祝福",
+        "location": "spirit_spring",
+        "reward": "回復の指輪"
+      }
+    ]
+  }
+} 
