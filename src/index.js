@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import MapScene from './scenes/MapScene';
 
 const config = {
   type: Phaser.AUTO,
@@ -11,14 +12,11 @@ const config = {
       debug: false
     }
   },
-  scene: {
-    preload: preload,
-    create: create,
-    update: update
-  }
+  scene: MapScene
 };
 
-const game = new Phaser.Game(config);
+// ゲームインスタンスをグローバルに公開
+window.game = new Phaser.Game(config);
 
 function preload() {
   // アセットの読み込み
